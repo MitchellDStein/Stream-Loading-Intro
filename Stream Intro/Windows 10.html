@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Windows 10</title>
+  <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+  <title>Installing Windows 10</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="jQuery-plugin-progressbar.js"></script>
+
+
+  <script>
+    var count = 0;
+    var counter = setInterval(timer, 1200); //1000 will run it every 1 second
+
+    function timer() {
+      count = count + 1;
+
+      if (count > 100) {
+        document.getElementById("install").style = "color: #afafaf"
+        document.getElementById("start").style = "color: #1a5edd"
+        clearInterval(timer);
+        return;
+      }
+
+      document.getElementById("timer").innerHTML = count + '%';
+      document.getElementById("timer2").innerHTML = count + '%';
+    }
+  </script>
+
+</head>
+
+<body id="backChange">
+  <div style="width:100%;height:100%;position:fixed;">
+    <center>
+      <div class="center">
+        <h1 data-translate="_win10updates1">Loading Stream...</h1>
+        <p style="color:#afafaf;" data-translate="_win10updates2">Your entertainment will start soon. Sit back and
+          relax.</p>
+
+        <div style="clear:both;" class="progress-bar position">
+          <div class="background"></div>
+          <div class="rotate"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="" id=""><span id="backChange"><a id="timer">0%</a></span></div>
+        </div>
+
+
+        <script>
+          // functison startLoading() {
+          $(".progress-bar").loading();
+          // }
+          // settimeout(startLoading(), 5000)
+        </script>
+
+
+      </div>
+
+      <h1 id="starting">Starting Stream</h1>
+
+      <div id="bottom">
+        <p class="third"><span style="color:#afafaf">Getting Snacks 100%</span></p>
+        <p class="third" id="install">Installing host and gameplay <a id="timer2">0%</a></p>
+        <p class="third" id="start">Starting Stream</p>
+      </div>
+    </center>
+  </div>
+
+
+</body>
+
+</html>

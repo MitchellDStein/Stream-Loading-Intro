@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(207, 45, 45);
+    font-family: Segoe UI;
+    color: white;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: normal;
+    font-family: Segoe UI Light, Segoe UI;
+}
+
+#backChange {
+    animation: 3s infinite alternate ease-out backgroundChange
+}
+
+#bottom {
+    position: fixed;
+    bottom: 3%;
+    width: 60%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+#install {
+    color: #1a5edd;
+}
+
+#start {
+    color: #afafaf;
+}
+
+#starting {
+    /* height: 230%; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 150px;
+    animation-name: fadeStart;
+    animation-delay: 122s;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    padding-top: 10%
+}
+
+.center {
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    margin-left: -250px;
+    margin-top: -250px;
+    animation-name: example;
+    animation-delay: 121s;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.third {
+    position: relative;
+    float: left;
+    width: 33%
+}
+
+.position {
+    margin-left: 50px;
+    margin-top: 8%;
+}
+
+.progress-bar {
+    position: fixed;
+    height: 400px;
+    width: 400px;
+}
+
+.progress-bar div {
+    position: fixed;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+}
+
+.progress-bar div span {
+    position: absolute;
+    font-family: Segoe UI Light, Segoe UI, Arial;
+    font-size: 100px;
+    line-height: 350px;
+    height: 380px;
+    width: 380px;
+    left: 10px;
+    top: 10px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.progress-bar .background {
+    background-color: #8b37da;
+}
+
+.progress-bar .rotate {
+    clip: rect(0 200px 400px 0);
+    background-color: #7b7b7b;
+}
+
+.progress-bar .left {
+    clip: rect(0 200px 400px 0);
+    opacity: 1;
+    background-color: #7b7b7b;
+}
+
+.progress-bar .right {
+    clip: rect(0 200px 400px 0);
+    transform: rotate(180deg);
+    opacity: 0;
+    background-color: #7b7b7b;
+}
+
+@keyframes backgroundChange {
+    from {
+        background-color: black
+    }
+    
+    to {
+        background-color: #161616
+    }
+}
+
+@keyframes fadeStart {
+    0% {
+        opacity: 0;
+    }
+    
+    50% {
+        color: #afafaf
+    }
+    
+    90% {
+        opacity: 1;
+    }
+    
+    100% {
+        color: #1a5edd
+    }
+} 
+@keyframes example {
+    0% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes toggle {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
